@@ -1,23 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import { useState } from 'react';
+import './App.css';
 import Login from "./paginas/login";
 import Dashboard from "./paginas/Dashboard";
 
 function App() {
+  // Login
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  // Función para entrar
+  const handleLogin = () => {
+    setIsAuthenticated(true);
+  };
+
+  // Función para salir
+  const handleLogout = () => {
+    setIsAuthenticated(false);
+  };
+
   return (
     <>
-      {/* Ahora solo les va a salir el login */}
-        <Login /> 
-        
-        {/* Para mostrar uno u otro, comentar uno y el otro quitar comentado */}
-
-       {/*<Dashboard />*/}
+      {isAuthenticated ? (
+        // Pasamos la función de cierre
+        <Dashboard onLogout={handleLogout} />
+      ) : (
+        // Pasamos la función de login
+        <Login onLogin={handleLogin} />
+      )}
     </>
   );
 }
 
 export default App;
-
