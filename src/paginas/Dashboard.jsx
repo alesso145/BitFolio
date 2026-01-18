@@ -1,49 +1,29 @@
-import { useState } from "react";
-import TeamList from "../componentes/ListaEquipo";
-import DetallePerfil from "../componentes/PerfilCompleto";
+import ListaEquipo from "../componentes/ListaEquipo";
 import PerfilVacio from "../componentes/PerfilVacio";
+import "../App.css";
 
-export default function Dashboard({ onLogout }) {
-  // Muestra el perfil seleccionado
-  const [integranteSeleccionado, setIntegranteSeleccionado] = useState(null);
-
+export default function Dashboard() {
   return (
     <div className="dashboard">
-      {/* Header del Dashboard */}
-      <header className="dashboard-header">
-        <div className="header-brand">
-          <img src="/BitFolioLogo.png" alt="BitFolio Logo" className="mini-logo" />
-          <span className="brand-name">BitFolio</span>
+
+      {/* NAVBAR */}
+      <header className="navbar">
+        <div className="navbar-left">
+          <span className="logo">BitFolio</span>
         </div>
-        
-        <div className="header-user-actions">
-          <span className="welcome-text">
-            Bienvenido, <strong>Santiago</strong>
-          </span>
-          <button className="btn-logout" onClick={onLogout}>
-            {/* Icono de salida*/}
-            <span className="logout-icon">↪</span> Cerrar sesión
-          </button>
+
+        <div className="navbar-right">
+          <span>Bienvenido, <b>Santiago</b></span>
+          <button className="logout">Cerrar sesión</button>
         </div>
       </header>
 
-      {/* Cuerpo principal del Dashboard */}
-      <main className="dashboard-main">
-        {/* Barra lateral con la lista de integrantes */}
-        <TeamList onSelect={setIntegranteSeleccionado} />
+      {/* CUERPO */}
+      <div className="dashboard-body">
+        <ListaEquipo />
+        <PerfilVacio />
+      </div>
 
-        {/* Panel de detalle que cambia según la selección */}
-        <div className="detail-container">
-          {integranteSeleccionado ? (
-            <DetallePerfil 
-              key={integranteSeleccionado.id} 
-              integrante={integranteSeleccionado} 
-            />
-          ) : (
-            <PerfilVacio />
-          )}
-        </div>
-      </main>
     </div>
   );
 }

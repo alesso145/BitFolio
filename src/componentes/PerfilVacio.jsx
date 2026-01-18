@@ -1,8 +1,10 @@
 export default function PerfilVacio() {
   return (
-<section>
-      <h2>Selecciona un integrante del grupo</h2>
-      <p>Haz clic en uno de los miembros del equipo para ver su perfil.</p>
-    </section>
+    <main className="perfil-vacio">
+      <div className="perfil-mensaje">
+        <div className="icono">👥</div>
+        <p>Selecciona un integrante del equipo para ver su perfil</p>
+      </div>
+    </main>
   );
 }

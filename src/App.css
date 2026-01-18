@@ -1,42 +1,121 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: radial-gradient(circle, #2a2742, #0e0d1b);
+  color: white;
+}
+
+/* DASHBOARD */
+.dashboard {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAVBAR */
+.navbar {
+  height: 60px;
+  background: #2a2742;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  color: #f5c77a;
+  font-weight: bold;
+  font-size: 18px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar-right {
+  display: flex;
+  gap: 16px;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.logout {
+  background: transparent;
+  border: 1px solid #ff4d4d;
+  color: #ff4d4d;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
-.card {
-  padding: 2em;
+/* BODY */
+.dashboard-body {
+  flex: 1;
+  display: flex;
+  gap: 16px;
+  padding: 16px;
 }
 
-.read-the-docs {
-  color: #888;
+/* SIDEBAR */
+.sidebar {
+  width: 320px;
+  background: #2a2742;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  color: #f5c77a;
+  margin-bottom: 16px;
+}
+
+.team-card {
+  display: flex;
+  gap: 12px;
+  background: #1f1c33;
+  padding: 12px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  align-items: center;
+}
+
+.team-card:hover {
+  background: #332f55;
+}
+
+.team-card img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.team-card h4 {
+  font-size: 14px;
+}
+
+.team-card p {
+  font-size: 12px;
+  color: #bbb;
+}
+
+/* PERFIL VACÍO */
+.perfil-vacio {
+  flex: 1;
+  background: #1f1c33;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.perfil-mensaje {
+  text-align: center;
+  color: #aaa;
+}
+
+.icono {
+  font-size: 48px;
+  margin-bottom: 12px;
 }
