@@ -1,28 +1,23 @@
-import { equipo } from "../data/equipo.js";
+import { equipo } from "../data/equipo";
 
-export default function Lista({ onSelect }) {
+export default function ListaEquipo({ onSelect }) {
   return (
-    <aside className="lista-equipo">
+    <aside className="sidebar">
       <h2>Equipo</h2>
-      <ul>
-        {equipo.map((integrante) => (
-          <li
-            key={integrante.id}
-            className="item-equipo"
-            onClick={() => onSelect(integrante)}
-          >
-            <img 
-              src={integrante.foto} 
-              alt={integrante.nombre} 
-              className="team-avatar" 
-            />
-            <div>
-              <h3>{integrante.nombre}</h3>
-              <p>{integrante.rol}</p>
-            </div>
-          </li>
-        ))}
-      </ul>
+
+      {equipo.map((integrante) => (
+        <div
+          key={integrante.id}
+          className="team-card"
+          onClick={() => onSelect(integrante)}
+        >
+          <img src={integrante.foto} alt={integrante.nombre} />
+          <div>
+            <h4>{integrante.nombre}</h4>
+            <p>{integrante.rol}</p>
+          </div>
+        </div>
+      ))}
     </aside>
   );
 }

@@ -1,44 +1,56 @@
+/* ================= RESET GLOBAL ================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
+html,
 body {
-  background: radial-gradient(circle, #2a2742, #0e0d1b);
-  color: white;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background: #1f1d2e;
+  font-family: sans-serif;
 }
 
-/* DASHBOARD */
+/* ================= CONTENEDOR DASHBOARD ================= */
 .dashboard {
-  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-/* NAVBAR */
+/* ================= NAVBAR SUPERIOR ================= */
 .navbar {
   height: 60px;
+  width: 100%;
   background: #2a2742;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  flex-shrink: 0;
 }
 
+/* Logo */
 .logo {
   color: #f5c77a;
   font-weight: bold;
   font-size: 18px;
 }
 
+/* Navbar derecha */
 .navbar-right {
   display: flex;
   gap: 16px;
   align-items: center;
+  color: #ddd;
 }
 
+/* Botón logout */
 .logout {
   background: transparent;
   border: 1px solid #ff4d4d;
@@ -48,40 +60,48 @@ body {
   cursor: pointer;
 }
 
-/* BODY */
+/* ================= CUERPO DEL DASHBOARD ================= */
 .dashboard-body {
   flex: 1;
+  width: 100%;
   display: flex;
-  gap: 16px;
   padding: 16px;
 }
 
-/* SIDEBAR */
+/* ================= SIDEBAR ================= */
 .sidebar {
   width: 320px;
-  background: #2a2742;
-  border-radius: 16px;
+  margin-right: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 20px;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Título sidebar */
 .sidebar h2 {
   color: #f5c77a;
   margin-bottom: 16px;
+  font-size: 16px;
 }
 
+/* ================= TARJETA DE INTEGRANTE ================= */
 .team-card {
   display: flex;
   gap: 12px;
-  background: #1f1c33;
+  background: rgba(255, 255, 255, 0.06);
   padding: 12px;
-  border-radius: 12px;
+  border-radius: 14px;
   margin-bottom: 12px;
   cursor: pointer;
   align-items: center;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .team-card:hover {
-  background: #332f55;
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
 }
 
 .team-card img {
@@ -93,6 +113,7 @@ body {
 
 .team-card h4 {
   font-size: 14px;
+  font-weight: 600;
 }
 
 .team-card p {
@@ -100,22 +121,79 @@ body {
   color: #bbb;
 }
 
-/* PERFIL VACÍO */
+/* ================= PANEL DERECHO ================= */
 .perfil-vacio {
   flex: 1;
-  background: #1f1c33;
-  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* ================= MENSAJE PERFIL VACÍO ================= */
 .perfil-mensaje {
   text-align: center;
   color: #aaa;
 }
 
 .icono {
-  font-size: 48px;
-  margin-bottom: 12px;
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  border: 1px solid rgba(245, 199, 122, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: #f5c77a;
+  margin: 0 auto 14px;
+}
+
+/* ================= PERFIL DETALLE ================= */
+.perfil-detalle {
+  text-align: center;
+  max-width: 420px;
+}
+
+.perfil-avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #f5c77a;
+  margin-bottom: 14px;
+}
+
+.perfil-detalle h2 {
+  margin-bottom: 4px;
+}
+
+.perfil-detalle h4 {
+  color: #f5c77a;
+  font-weight: normal;
+  margin-bottom: 14px;
+}
+
+.perfil-detalle p {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 16px;
+}
+
+/* ================= SKILLS ================= */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.skill {
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: rgba(245, 199, 122, 0.15);
+  color: #f5c77a;
+  font-size: 12px;
 }

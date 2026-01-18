@@ -33,7 +33,7 @@
 .input-group {
   display: flex;
   align-items: center;
-  background-color: #1f4a35;
+  background-color: #ffffff;
   border: 1px solid #3e6f57;
   border-radius: 12px;
   padding: 12px 15px;
@@ -75,4 +75,19 @@
 
 .login-btn:hover {
   background-color: #e8c77e;
+}
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  width: 360px;
+  background: #2a2742;
+  padding: 32px;
+  border-radius: 20px;
+  text-align: center;
 }
