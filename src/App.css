@@ -10,7 +10,7 @@ body {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
-  background: #1f1d2e;
+  background: #191631;
   font-family: sans-serif;
 }
 
@@ -72,7 +72,7 @@ body {
 .sidebar {
   width: 320px;
   margin-right: 16px;
-  background: rgba(255, 255, 255, 0.04);
+  background: #2a2742;
   border-radius: 20px;
   padding: 20px;
   display: flex;
@@ -90,7 +90,7 @@ body {
 .team-card {
   display: flex;
   gap: 12px;
-  background: rgba(255, 255, 255, 0.06);
+  background: #1b1430;
   padding: 12px;
   border-radius: 14px;
   margin-bottom: 12px;
@@ -99,14 +99,16 @@ body {
   transition: background 0.2s ease, transform 0.2s ease;
 }
 
+/*Color al pasar el mouse*/
 .team-card:hover {
-  background: rgba(255, 255, 255, 0.12);
+  /*background: rgb(255, 255, 255);*/
   transform: translateY(-2px);
 }
 
+/*Tamaño de imagen lado izquierdo*/
 .team-card img {
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 55px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -114,11 +116,17 @@ body {
 .team-card h4 {
   font-size: 14px;
   font-weight: 600;
+  color: #ffffff;
+  transition: color 0.2s ease;
+}
+.team-card:hover h4 {
+  color: #f5c77a;
 }
 
+/*Color de letras abajo del nombre*/
 .team-card p {
   font-size: 12px;
-  color: #bbb;
+  color: #a79f9f;
 }
 
 /* ================= PANEL DERECHO ================= */
@@ -135,7 +143,7 @@ body {
 /* ================= MENSAJE PERFIL VACÍO ================= */
 .perfil-mensaje {
   text-align: center;
-  color: #aaa;
+  color: #fffefe;
 }
 
 .icono {
@@ -178,7 +186,7 @@ body {
 
 .perfil-detalle p {
   font-size: 14px;
-  color: #ccc;
+  color: #ffffff;
   margin-bottom: 16px;
 }
 
@@ -190,10 +198,156 @@ body {
   justify-content: center;
 }
 
-.skill {
+.skill {  
   padding: 6px 12px;
   border-radius: 20px;
   background: rgba(245, 199, 122, 0.15);
   color: #f5c77a;
   font-size: 12px;
+}
+
+.perfil-contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* CARD GENERAL */
+.perfil-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  border: 1px solid rgba(245, 199, 122, 0.3);
+  padding: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.perfil-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(245,199,122,0.4);
+}
+
+/* PRIMER RECUADRO: FOTO + INFO */
+.perfil-principal {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.perfil-principal-foto {
+  flex: 0 0 150px;
+}
+
+.perfil-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #f5c77a;
+  object-fit: cover;
+}
+
+.perfil-principal-info {
+  flex: 1;
+  text-align: left;
+}
+
+.perfil-principal-info h2 {
+  font-size: 26px;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.perfil-principal-info h4 {
+  font-size: 18px;
+  color: #f5c77a;
+  margin-bottom: 12px;
+}
+
+.perfil-principal-info p {
+  font-size: 14px;
+  color: #e0e0e0;
+  line-height: 1.5;
+}
+
+/* CONTACTO Y OTROS CARDS */
+.perfil-card h4 {
+  color: #f5c77a;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.perfil-card p {
+  font-size: 14px;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.perfil-card p b {
+  color: #f5c77a;
+}
+
+/* HABILIDADES */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.skill {
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: rgba(245, 199, 122, 0.15);
+  color: #f5c77a;
+  font-size: 12px;
+  font-weight: 500;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.skill:hover {
+  transform: scale(1.05);
+  background: rgba(245, 199, 122, 0.25);
+}
+
+/* EXPERIENCIA */
+.experiencia-item {
+  margin-bottom: 16px;
+}
+
+.experiencia-item h5 {
+  color: #ffffff;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.experiencia-fecha {
+  color: #f5c77a;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.experiencia-item p {
+  font-size: 14px;
+  color: #e0e0e0;
+  line-height: 1.4;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 700px) {
+  .perfil-principal {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .perfil-principal-info {
+    text-align: center;
+  }
+
+  .perfil-principal-foto {
+    margin-bottom: 12px;
+  }
 }

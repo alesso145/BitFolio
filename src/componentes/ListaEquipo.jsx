@@ -12,6 +12,7 @@ export default function ListaEquipo({ onSelect }) {
           onClick={() => onSelect(integrante)}
         >
           <img src={integrante.foto} alt={integrante.nombre} />
+
           <div>
             <h4>{integrante.nombre}</h4>
             <p>{integrante.rol}</p>

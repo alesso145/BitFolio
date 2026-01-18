@@ -1,10 +1,10 @@
 /* Login.css */
 
 .login-card {
-  width: 380px;
-  padding: 40px 35px;
+  width: 450px;
+  padding: 70px 40px;
   border-radius: 20px;
-  background: linear-gradient(180deg, #244d36, #1b3b2a);
+  background:#1b3b2a;
   border: 3px solid #d8b36a;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
   text-align: center;
@@ -12,20 +12,20 @@
 
 /* Logo */
 .login-logo {
-  width: 48px;
+  width: 150px;
   margin-bottom: 15px;
 }
 
 /* Títulos */
 .login-card h1 {
   color: #d8b36a;
-  font-size: 32px;
+  font-size: 35px;
   margin-bottom: 5px;
 }
 
 .login-card p {
   color: #e0f1e8;
-  font-size: 14px;
+  font-size: 17px;
   margin-bottom: 30px;
 }
 
@@ -33,7 +33,7 @@
 .input-group {
   display: flex;
   align-items: center;
-  background-color: #ffffff;
+  background-color: #1b3b2a;
   border: 1px solid #3e6f57;
   border-radius: 12px;
   padding: 12px 15px;
@@ -82,12 +82,4 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.login-card {
-  width: 360px;
-  background: #2a2742;
-  padding: 32px;
-  border-radius: 20px;
-  text-align: center;
 }

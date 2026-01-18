@@ -1,8 +1,12 @@
+import { useState } from "react";
 import ListaEquipo from "../componentes/ListaEquipo";
 import PerfilVacio from "../componentes/PerfilVacio";
+import PerfilCompleto from "../componentes/PerfilCompleto";
 import "../App.css";
 
 export default function Dashboard() {
+  const [personaSeleccionada, setPersonaSeleccionada] = useState(null);
+
   return (
     <div className="dashboard">
 
@@ -20,8 +24,13 @@ export default function Dashboard() {
 
       {/* CUERPO */}
       <div className="dashboard-body">
-        <ListaEquipo />
-        <PerfilVacio />
+        <ListaEquipo onSelect={setPersonaSeleccionada} />
+
+        {personaSeleccionada ? (
+          <PerfilCompleto persona={personaSeleccionada} />
+        ) : (
+          <PerfilVacio />
+        )}
       </div>
 
     </div>
