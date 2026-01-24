@@ -12,20 +12,23 @@ export default function Dashboard() {
 
       {/* NAVBAR */}
       <header className="navbar">
-  <div className="navbar-left">
-    <img src="/BitFolioLogo.png" alt="Logo" className="navbar-logo" />
-    <span className="logo">BitFolio</span>
-  </div>
+        <div className="navbar-left">
+          <img src="/BitFolioLogo.png" alt="Logo" className="navbar-logo" />
+          <span className="logo">BitFolio</span>
+        </div>
 
         <div className="navbar-right">
           <span>Bienvenido, <b>Santiago</b></span>
-          <button className="logout">Cerrar sesión</button>
+          <button className="logout">➜]  Cerrar sesión</button>
         </div>
       </header>
 
       {/* CUERPO */}
       <div className="dashboard-body">
-        <ListaEquipo onSelect={setPersonaSeleccionada} />
+        <ListaEquipo
+          onSelect={setPersonaSeleccionada}
+          seleccionado={personaSeleccionada}
+        />
 
         {personaSeleccionada ? (
           <PerfilCompleto persona={personaSeleccionada} />

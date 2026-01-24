@@ -7,6 +7,8 @@ export const equipo = [
     descripcion: "Especialista en creación de contenido visual dinámico y narrativa digital. Enfocada en la experiencia de usuario a través del movimiento.",
     email: "andrea.diseno@bitfolio.dev",
     telefono: "+593 987 654 321",
+    github: "https://github.com/andreaaguilera",
+    linkedin: "https://linkedin.com/in/andreaaguilera",
     habilidadesPrincipales: ["After Effects", "Blender", "Maya", "UI Motion Design"],
     habilidadesSecundarias: ["Ilustración Digital", "Storyboarding", "Photoshop"],
     experiencia: [
@@ -25,6 +27,8 @@ export const equipo = [
     descripcion: "Desarrollador frontend con enfoque en crear interfaces modernas y responsivas. Experto en transformar diseños en experiencias web interactiva y optimizadas.",
     email: "frixon.lovato@bitfolio.dev",
     telefono: "+593 998 765 432",
+    github: "https://github.com/andreaaguilera",
+    linkedin: "https://linkedin.com/in/andreaaguilera",
     habilidadesPrincipales: ["React", "TypeScript", "Tailwind CSS", "Next.js"],
     habilidadesSecundarias: ["JavaScript", "Redux", "Figma", "CSS/SASS"],
     experiencia: [
@@ -48,6 +52,8 @@ export const equipo = [
     descripcion: "Apasionado por la arquitectura de software y la optimización de procesos en el lado del servidor.",
     email: "alessandro.m@bitfolio.dev",
     telefono: "+593 991 234 567",
+    github: "https://github.com/andreaaguilera",
+    linkedin: "https://linkedin.com/in/andreaaguilera",
     habilidadesPrincipales: ["Node.js", "Express", "Java", "Spring Boot"],
     habilidadesSecundarias: ["Docker", "Microservicios", "AWS", "Python"],
     experiencia: [
@@ -66,6 +72,8 @@ export const equipo = [
     descripcion: "Experto en modelado de datos, optimización de consultas y seguridad de la información.",
     email: "stalin.p@bitfolio.dev",
     telefono: "+593 995 888 777",
+    github: "https://github.com/andreaaguilera",
+    linkedin: "https://linkedin.com/in/andreaaguilera",
     habilidadesPrincipales: ["SQL Server", "PostgreSQL", "MongoDB", "ETL"],
     habilidadesSecundarias: ["Power BI", "Data Mining", "Azure SQL"],
     experiencia: [
@@ -84,6 +92,8 @@ export const equipo = [
     descripcion: "Especialista en lógica de negocio y seguridad informática para aplicaciones empresariales.",
     email: "santiago.t@bitfolio.dev",
     telefono: "+593 992 000 111",
+    github: "https://github.com/andreaaguilera",
+    linkedin: "https://linkedin.com/in/andreaaguilera",
     habilidadesPrincipales: ["Java", "C#", "SQL Server", "PHP"],
     habilidadesSecundarias: ["Git", "Scrum", "Unit Testing", "Firebase"],
     experiencia: [

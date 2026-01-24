@@ -278,13 +278,9 @@ body {
 .perfil-card p b {
   color: #f5c77a;
 }
-/* Hover SOLO para el correo (primer span) */
-.contacto span:first-child {
-  transition: color 0.2s ease;
-}
 
 .contacto span:first-child:hover {
-  color: #f5c77a; /* amarillo */
+  color: #f5c77a;
 }
 
 /* HABILIDADES */
@@ -397,7 +393,7 @@ body {
 /*Linea verde*/
 .experiencia-item {
   background: rgba(255, 255, 255, 0.04);
-  border-left: 3px solid #2ecc71;
+  border-left: 3px solid rgba(46, 204, 113, 0.25);
   border-radius: 14px;
   padding: 16px 18px 16px 22px;
   margin-bottom: 18px;
@@ -412,7 +408,7 @@ body {
   top: 22px;
   width: 12px;
   height: 12px;
-  background: #2ecc71;
+  background: rgba(46, 204, 113, 0.25);
   border-radius: 50%;
 }
 
@@ -432,4 +428,42 @@ body {
   width: 100px;
   height: 100px;
   object-fit: contain;
+}
+
+/*Queda presionado en color verde*/
+.team-card-activo {
+  /*border: 2px solid #2ecc71;*/
+  background: rgba(46, 204, 113, 0.25);
+}
+
+/*Quedan letras amarillas*/
+.team-card-activo h4 {
+  color: #f5c77a; /* amarillo BitFolio */
+}
+
+.team-card-activo p {
+  color: #f5c77a;
+}
+
+/*Color amarillo en nombre de bienvenido*/
+.navbar-right b {
+  color: #f5c77a; /* amarillo */
+  font-weight: 600;
+}
+
+/* Hover amarillo SOLO en PC */
+@media (hover: hover) {
+  .contacto .correo:hover {
+    color: #ffd966;
+  }
+}
+
+/* Celular fijo sin hover */
+.contacto .telefono {
+  color: #ffffff;
+}
+
+/* Texto blanco por defecto en contacto */
+.contacto span {
+  color: #ffffff;
 }

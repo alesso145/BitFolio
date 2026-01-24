@@ -19,10 +19,11 @@ export default function PerfilCompleto({ persona }) {
         <div className="perfil-card">
           <h4>Contacto</h4>
           <div className="contacto">
-            <span>📧 {persona.email}</span>
-            <span>📞 {persona.telefono}</span>
-            {persona.github && <span>🐙 GitHub</span>}
-            {persona.linkedin && <span>🔗 LinkedIn</span>}
+            <span className="correo">✉ {persona.email}</span>
+            <span className="telefono">🕻 {persona.telefono}</span>
+
+            {persona.github && <span className="correo">😺 GitHub</span>}
+            {persona.linkedin && <span className="correo">🔗 LinkedIn</span>}
           </div>
         </div>
 
