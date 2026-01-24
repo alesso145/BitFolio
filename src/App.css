@@ -170,7 +170,7 @@ body {
   height: 110px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #f5c77a;
+  border: 2px solid #f57a7a;
   margin-bottom: 14px;
 }
 
@@ -190,22 +190,6 @@ body {
   margin-bottom: 16px;
 }
 
-/*SKILLS*/
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  justify-content: center;
-}
-
-.skill {  
-  padding: 6px 12px;
-  border-radius: 20px;
-  background: rgba(245, 199, 122, 0.15);
-  color: #f5c77a;
-  font-size: 12px;
-}
-
 .perfil-contenedor {
   display: flex;
   flex-direction: column;
@@ -219,15 +203,20 @@ body {
 .perfil-card {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 16px;
-  border: 1px solid rgba(245, 199, 122, 0.3);
+  border: 1px solid #2a2742;
   padding: 20px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+
 .perfil-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(245,199,122,0.4);
+  /*background: radial-gradient(
+    circle at top left,
+    rgba(245, 199, 122, 0.15),
+    rgba(245, 199, 122, 0.05),
+    transparent 70%
+  );*/
+  border-color: #1b3b2a;
 }
 
 /* PRIMER RECUADRO: FOTO + INFO */
@@ -246,7 +235,7 @@ body {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 3px solid #f5c77a;
+  border: 3px solid #4e4e4e;
   object-fit: cover;
 }
 
@@ -289,6 +278,14 @@ body {
 .perfil-card p b {
   color: #f5c77a;
 }
+/* Hover SOLO para el correo (primer span) */
+.contacto span:first-child {
+  transition: color 0.2s ease;
+}
+
+.contacto span:first-child:hover {
+  color: #f5c77a; /* amarillo */
+}
 
 /* HABILIDADES */
 .skills {
@@ -308,9 +305,28 @@ body {
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
-.skill:hover {
+/* .skill:hover {
   transform: scale(1.05);
   background: rgba(245, 199, 122, 0.25);
+} */
+
+/*Brillo verde al pasar el mouse*/
+.skill-primary {
+  transition: box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.skill-primary:hover {
+  box-shadow: 0 0 10px rgba(46, 204, 113, 0.6);
+  background: rgba(46, 204, 113, 0.25);
+}
+
+/*Letras amarillas*/
+.skill-secondary {
+  transition: color 0.2s ease;
+}
+
+.skill-secondary:hover {
+  color: #f5c77a;
 }
 
 /* EXPERIENCIA */
@@ -350,4 +366,41 @@ body {
   .perfil-principal-foto {
     margin-bottom: 12px;
   }
+}
+
+.skill-primary {
+  background: rgba(46, 204, 113, 0.15);
+  color: #f5c77a;
+  border-color: #2ecc71;
+}
+
+.skill-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ccc;
+  border-color: #555;
+}
+
+.contacto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.contacto span {
+  padding: 8px 14px;
+  border-radius: 12px;
+  background: #1e1b2e;
+  border: 1px solid #333;
+  cursor: pointer;
+}
+
+.experiencia-item {
+  border-left: 2px solid #2ecc71;
+  padding-left: 15px;
+  margin-bottom: 15px;
+}
+
+.experiencia-fecha {
+  font-size: 0.8rem;
+  color: #aaa;
 }
