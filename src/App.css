@@ -335,7 +335,7 @@ body {
 }
 
 .experiencia-item h5 {
-  color: #ffffff;
+  color: #f5c77a;
   font-size: 16px;
   margin-bottom: 4px;
 }
@@ -394,13 +394,42 @@ body {
   cursor: pointer;
 }
 
+/*Linea verde*/
 .experiencia-item {
-  border-left: 2px solid #2ecc71;
-  padding-left: 15px;
-  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.04);
+  border-left: 3px solid #2ecc71;
+  border-radius: 14px;
+  padding: 16px 18px 16px 22px;
+  margin-bottom: 18px;
+  position: relative;
+}
+
+/*bolita verde*/
+.experiencia-item::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 22px;
+  width: 12px;
+  height: 12px;
+  background: #2ecc71;
+  border-radius: 50%;
 }
 
 .experiencia-fecha {
   font-size: 0.8rem;
   color: #aaa;
+}
+
+/*Logo perfiles*/
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
 }

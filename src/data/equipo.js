@@ -11,7 +11,7 @@ export const equipo = [
     habilidadesSecundarias: ["Ilustración Digital", "Storyboarding", "Photoshop"],
     experiencia: [
       {
-        titulo: "Lead Animator en Studio Creative",
+        titulo: "💼Lead Animator en Studio Creative",
         periodo: "2022 - Presente",
         descripcion: "Dirección de proyectos de animación para campañas publicitarias digitales."
       }
@@ -29,12 +29,12 @@ export const equipo = [
     habilidadesSecundarias: ["JavaScript", "Redux", "Figma", "CSS/SASS"],
     experiencia: [
       {
-        titulo: "Frontend Developer en WebTech Solutions",
+        titulo: "💼Frontend Developer en WebTech Solutions",
         periodo: "2021 - Presente",
         descripcion: "Desarrollo de aplicaciones web SPA con React y Next.js. Implementación de diseños responsivos y optimización de performance."
       },
       {
-        titulo: "Junior Frontend Developer en DigitalLab",
+        titulo: "💼Junior Frontend Developer en DigitalLab",
         periodo: "2019 - 2021",
         descripcion: "Creación de componentes reutilizables y páginas web interactivas. Trabajo colaborativo con equipos de diseño."
       }
@@ -52,7 +52,7 @@ export const equipo = [
     habilidadesSecundarias: ["Docker", "Microservicios", "AWS", "Python"],
     experiencia: [
       {
-        titulo: "Backend Engineer en DataFlow",
+        titulo: "💼Backend Engineer en DataFlow",
         periodo: "2020 - Presente",
         descripcion: "Diseño y mantenimiento de APIs RESTful de alto tráfico."
       }
@@ -70,7 +70,7 @@ export const equipo = [
     habilidadesSecundarias: ["Power BI", "Data Mining", "Azure SQL"],
     experiencia: [
       {
-        titulo: "DBA Senior en BankCorp",
+        titulo: "💼DBA Senior en BankCorp",
         periodo: "2018 - Presente",
         descripcion: "Administración de bases de datos críticas y migración de sistemas legacy a la nube."
       }
@@ -88,7 +88,7 @@ export const equipo = [
     habilidadesSecundarias: ["Git", "Scrum", "Unit Testing", "Firebase"],
     experiencia: [
       {
-        titulo: "Software Developer en AutoCore Project",
+        titulo: "💼Software Developer en AutoCore Project",
         periodo: "2023 - Presente",
         descripcion: "Desarrollo del sistema central de gestión utilizando arquitectura MVC y SQL Server."
       }

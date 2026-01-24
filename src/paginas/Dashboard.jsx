@@ -12,9 +12,10 @@ export default function Dashboard() {
 
       {/* NAVBAR */}
       <header className="navbar">
-        <div className="navbar-left">
-          <span className="logo">BitFolio</span>
-        </div>
+  <div className="navbar-left">
+    <img src="/BitFolioLogo.png" alt="Logo" className="navbar-logo" />
+    <span className="logo">BitFolio</span>
+  </div>
 
         <div className="navbar-right">
           <span>Bienvenido, <b>Santiago</b></span>
