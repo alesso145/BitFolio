@@ -1,33 +1,40 @@
 import { useState } from "react";
+import { LogOut, User as UserIcon } from "lucide-react"; 
 import ListaEquipo from "../componentes/ListaEquipo";
 import PerfilVacio from "../componentes/PerfilVacio";
 import PerfilCompleto from "../componentes/PerfilCompleto";
-import "../App.css";
 
-export default function Dashboard() {
+// Recibimos 'user' desde App.jsx
+export default function Dashboard({ onLogout, user }) {
   const [personaSeleccionada, setPersonaSeleccionada] = useState(null);
+  const [busqueda, setBusqueda] = useState("");
 
   return (
     <div className="dashboard">
-
-      {/* NAVBAR */}
       <header className="navbar">
         <div className="navbar-left">
-          <img src="/BitFolioLogo.png" alt="Logo" className="navbar-logo" />
+          <img src="/imagenes/BitFolioLogo.png" alt="Logo" className="navbar-logo" />
           <span className="logo">BitFolio</span>
         </div>
 
         <div className="navbar-right">
-          <span>Bienvenido, <b>Santiago</b></span>
-          <button className="logout">➜]  Cerrar sesión</button>
+          <div className="user-info">
+            <UserIcon size={18} className="icon-user" />
+            {/* Mostramos el nombre dinámico del usuario logueado */}
+            <span>Bienvenido, <b>{user.nombre}</b></span>
+          </div>
+          <button className="logout" onClick={onLogout}>
+            <LogOut size={16} /> Cerrar sesión
+          </button>
         </div>
       </header>
 
-      {/* CUERPO */}
       <div className="dashboard-body">
         <ListaEquipo
           onSelect={setPersonaSeleccionada}
           seleccionado={personaSeleccionada}
+          busqueda={busqueda}
+          setBusqueda={setBusqueda}
         />
 
         {personaSeleccionada ? (
@@ -36,7 +43,6 @@ export default function Dashboard() {
           <PerfilVacio />
         )}
       </div>
-
     </div>
   );
 }
