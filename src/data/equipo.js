@@ -64,7 +64,7 @@ export const equipo = [
   {
     id: 3,
     nombre: "Alessandro Morales",
-    cedula: "1700000003",
+    cedula: "1754695219",
     rol: "Desarrollador Backend",
     foto: "/imagenes/Alesso.png",
     descripcion: "Experto en arquitecturas backend escalables y seguras. Especializado en diseño de APIs RESTful y gestión de lógica de negocio compleja del lado del servidor.",
@@ -95,7 +95,7 @@ export const equipo = [
   {
     id: 4,
     nombre: "Stalin Paguay",
-    cedula: "1700000004",
+    cedula: "1751050913",
     rol: "Administrador de Bases de Datos",
     foto: "/imagenes/Stalin.png",
     descripcion: "Especialista en diseño, optimización y administración de bases de datos. Enfocado en garantizar integridad, seguridad y rendimiento óptimo de los datos.",
